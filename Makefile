@@ -1,4 +1,4 @@
 all:
-	docker build -t hackbox .
+	docker build -t morria/hackbox .
 run:
-	docker run -it -v /Users/asm:/home/asm --rm hackbox
+	docker run -it -v $HOME:/home/asm --rm morria/hackbox
