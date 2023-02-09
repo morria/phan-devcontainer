@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+    phan-devcontainer:
+        build:
+          context: .
+        image: "morria/phan-devcontainer:latest"
+        restart: unless-stopped
+        container_name: "phan-devcontainer"
+        volumes:
+          - "${HOME}:/home/u"
+          - "${HOME}/d/phan:/workspace"
+        command: /bin/zsh

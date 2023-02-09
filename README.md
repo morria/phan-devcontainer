@@ -1,27 +1,21 @@
-phan-dev-shell is a development environment for [Phan](https://github.com/phan/phan).
+phan-devcontainer is a development environment for [Phan](https://github.com/phan/phan) usable by VSCode.
 
 Running this container will drop you into a shell which will be capable of building
 and testing [Phan](https://github.com/phan/phan).
 
-This container is hosted at https://hub.docker.com/r/morria/phan-dev-shell/. If
-you'd prefer not to build from source, you can just run it via the following.
+This container is hosted at https://hub.docker.com/r/morria/phan-devcontainer. If
+you'd prefer not to build from source, you can just run it via the following;
 
 ```sh
-docker run -it -v $HOME:/home/u --rm morria/phan-dev-shell
+docker run -it -v $HOME:/home/u --rm morria/phan-devcontainer
 ```
 
 ## Building and Running
 
-To build phan-dev-shell just run
+To build and run phan-devcontainer just run
 
 ```sh
-docker build -t morria/phan-dev-shell .
-```
-
-Once built, you can run phan-dev-shell via the following.
-
-```sh
-docker run -it -v $HOME:/home/u --rm morria/phan-dev-shell
+docker-composer up
 ```
 
 Running it will drop you into ZSH in `/home/u` on the container which will be mounted to your
@@ -33,4 +27,3 @@ cd development/phan
 composer install
 ./test
 ```
-
